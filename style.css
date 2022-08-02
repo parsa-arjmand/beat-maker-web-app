@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins' , sans-serif;
+    background: #f9f9f9;
+}
+i,svg{
+    pointer-events: none;
+}
+.kick-pad,.hihat-pad,.snare-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem .5rem;
+}
+.kick-pad{
+    background: rgb(166, 255, 158);
+}
+.snare-pad{
+    background: rgb(255, 253, 138);
+}
+.hihat-pad{
+    background: rgb(152, 193, 255);
+}
+.kick-pad.active{
+    background: rgb(18, 255, 49);
+}
+.snare-pad.active{
+    background: rgb(255, 251, 28);
+}
+.hihat-pad.active{
+    background: rgb(27, 118, 255);
+}
+.hihat-tracks,.snare-tracks,.kick-tracks{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 ;
+}
+.hihat,.kick,.snare{
+    display: flex;
+}
+.sequencer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0 2rem;
+}
+.mute{
+    border: none;
+    border-radius:7px ;
+    padding: .4rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    background: rgb(73, 73, 73);
+    color: white;
+}
+
+.pad{
+    border-radius: 7px;
+    transition: all .5s ease;
+}
+.play{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background: rgb(255, 255, 255);
+    border-radius: 7px;
+    margin-top: 2.5rem;
+    cursor:pointer;
+    background: rgb(44, 44, 44);
+    color: white;
+}
+select{
+    outline: none;
+
+padding: .7rem 1rem;
+border: 1px solid #E8EAED;
+border-radius: 5px;
+background: white;
+box-shadow: 0 1px 3px -2px #9098A9;
+cursor: pointer;
+  color: #5A667F;
+}
+.mute.active{
+    background: rgb(255, 174, 174);
+}
+.tempo{
+    margin-top: 1rem;
+    width: 30%;
+    
+}
+.tempo-slider{
+    -webkit-appearance: none;
+    padding: .2rem;
+    width: 100%;
+    background: rgb(44, 44, 44);
+    border-radius: 7px;
+}
+.tempo p{
+    margin-top: .5rem;
+    text-align: center;
+}
+@keyframes playTrack{
+    form{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
